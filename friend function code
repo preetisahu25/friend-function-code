@@ -1,0 +1,15 @@
+#include <iostream>
+ using namespace std;
+ class secret{
+ private:
+ int code= 123;
+  friend void reveal(secret);
+ };
+ void reveal(secret s){
+     cout<<"accessing private code:"<<s.code<<endl;
+ }
+ int main (){
+     secret s1;
+     reveal(s1);
+     return 0;
+ }
